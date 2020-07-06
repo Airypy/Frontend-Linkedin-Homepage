@@ -1,0 +1,772 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap");
+
+/*************************************************************************
+    RESET AND INITIAL STYLES
+**************************************************************************/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f5f5f5;
+    font-family: "Source Sans Pro", sans-serif;
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+}
+
+input,
+button {
+    outline: 0;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*************************************************************************
+    HEADER
+**************************************************************************/
+
+header#main-header {
+    height: 52px;
+    position: fixed;
+    background: #0077B5;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+header#main-header > div {
+    width: 1188px;
+    padding-left: 24px;
+    padding-right: 40px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header#main-header > div > div {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+
+header#main-header > div > div > img#header-logo {
+    width: 38px;
+    height: 38px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+
+header#main-header > div div input {
+    font-weight: bold;
+    background: #e1e9ee;
+    border: none;
+    border-radius: 2px;
+    font-size: 13px;
+    height: 34px;
+    max-width: 280px;
+    flex: 1;
+    color: rgba(40, 62, 74, 0.75);
+    padding-left: 10px;
+}
+
+header#main-header > div > div div {
+    display: flex;
+    flex: 1;
+    max-width: 280px;
+    position: relative;
+}
+
+header#main-header > div > div div input:focus {
+    background: #fff;
+}
+
+header#main-header > div div div span#search-icon {
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    font-size: 12px;
+    color: #283e4a;
+}
+
+header#main-header > div div div span#search-button {
+    display: none;
+    position: absolute;
+    right: 0;
+    padding: 9px;
+    background: #e1e9ee;
+    color: #0084bf;
+    border-radius: 2px;
+}
+
+/***************************************************************************
+    header > HEADER MEDIA QUERY
+/**************************************************************************/
+
+@media only screen and (max-width: 2000px) {
+    header#main-header > div {
+        padding-right: 14px;
+    }
+
+    header#main-header > div nav {
+        display: none;
+    }
+
+    header#main-header > div > div > img#header-logo {
+        display: none;
+    }
+
+    header#main-header > div > div > img#header-picture-menu {
+        display: block;
+        height: 38px;
+        width: 38px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        box-shadow: inset 0 1.5px 3px 0 rgba(0, 0, 0, 0.15),
+            0 1.5px 3px 0 rgba(0, 0, 0, 0.15);
+        background-color: #c7d1d8;
+        cursor: pointer;
+        margin-right: 25px;
+    }
+
+    header#main-header > div > div > span#header-picture-menu-bars {
+        display: block;
+        position: absolute;
+        left: 25px;
+        top: 26px;
+        color: #0077B5;
+        background: #fff;
+        font-size: 10px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #f6f6f6;
+        text-align: center;
+    }
+
+    header#main-header > div > div > span#header-picture-menu-bars span {
+        margin-top: 5px;
+    }
+
+    header#main-header > div > div > span {
+        display: block;
+        color: #c7d1d8;
+        width: 38px;
+        font-size: 26px;
+        cursor: pointer;
+        transition: color 0.3s;
+        margin-left: 23px;
+    }
+
+    header#main-header > div > div > span:hover {
+        color: #fff;
+    }
+
+    header#main-header > div > div div {
+        max-width: 100%;
+        flex-shrink: 1;
+        width: 0;
+    }
+
+    header#main-header > div div input {
+        max-width: 100%;
+        width: 0;
+    }
+
+    header#main-header > div div input {
+        max-width: 100%;
+        width: 0;
+    }
+}
+
+
+/*************************************************************************
+    MAIN CONTAINER
+**************************************************************************/
+
+div.container {
+    max-width: 1188px;
+    margin: 0 auto;
+    padding: 0 30px;
+    grid-template-areas:
+        "ads ads ads"
+        "left-aside main-section right-aside";
+    grid-template-rows: 100px 1fr;
+    grid-template-columns: 216px 1fr 312px;
+}
+@media only screen and (max-width:700px) {
+  div.container {
+    width:100%;
+    height:100%;
+    transform: translate(0%,4%);
+  }
+}
+@media only screen and (min-width:700px) {
+  div.container {
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    top: 27%;
+    transform: translate(-50%, -50%);
+  }
+
+}
+
+//**************************************************************************
+    main container > MAIN SECTION
+**************************************************************************/
+
+.container > div#main-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    margin-bottom: 100px;
+}
+
+div.container main#main-section {
+    grid-area: main-section;
+    margin: 0 25px;
+    width: 550px;
+}
+
+/**************************************************************************
+    main container > main section > SHARE BOX & FEED SORT
+**************************************************************************/
+
+main#main-section div#share-box {
+    background: #fff;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+    margin-top: 1px;
+    display: flex;
+    flex-direction:column;
+    margin:0 auto;
+}
+
+main#main-section div#share-box div#button-box {
+    display:flex;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+main#main-section div#share-box div#button-box .fas {
+    font-size: 18px;
+}
+
+main#main-section div#share-box div#button-box button {
+    background: #fff;
+    border: 0;
+    color: #696c6f;
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 26px 26.5px;
+    cursor: pointer;
+}
+
+main#main-section div#share-box div#button-box button#btn-post {
+    width: 100%;
+    text-align: left;
+    padding: 26px 17px;
+}
+
+main#main-section div#share-box div#button-box button#btn-post:hover {
+    color: #0073b1;
+}
+
+main#main-section
+    div#share-box
+    div#button-box
+    button#btn-post:hover
+    span#btn-text {
+    text-decoration: underline;
+}
+
+main#main-section div#share-box div#button-box button#btn-post span#btn-text {
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 6px;
+}
+
+main#main-section div#share-box div#button-box button#btn-document {
+    border-right: 0;
+    padding: 26px 30px;
+}
+
+main#main-section div#share-box div#button-box button#btn-picture:hover,
+main#main-section div#share-box div#button-box button#btn-video:hover,
+main#main-section div#share-box div#button-box button#btn-document:hover {
+    background: #f3f6f8;
+}
+
+main#main-section div#link-box {
+    padding: 13px 16px;
+    background: #f3f6f8;
+    font-size: 14px;
+}
+
+main#main-section div#link-box a {
+    color: #0073b1;
+    font-weight: bold;
+    padding-right: 1px;
+}
+
+main#main-section div#link-box a:hover {
+    text-decoration: underline;
+}
+
+main#main-section div#feed-sort {
+    display: flex;
+    align-items: center;
+    margin: 6px 0;
+}
+
+main#main-section div#feed-sort hr {
+    flex: 1;
+    border: 0;
+    display: block;
+    height: 1px;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+main#main-section div#feed-sort button {
+    border: 0;
+    background: transparent;
+    margin-left: 15px;
+    padding-bottom: 4px;
+    cursor: pointer;
+}
+
+main#main-section div#feed-sort button span {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+main#main-section div#feed-sort button span.fas {
+    font-size: 18px;
+    padding: 0 2px;
+}
+/**************************************************************************
+    main container > main section > FEED POSTS
+**************************************************************************/
+
+main#main-section article {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+    margin-bottom: 8px;
+}
+
+main#main-section article div#post-author {
+    display: flex;
+    padding: 14px 14px 0;
+}
+
+main#main-section article div#post-author a {
+    flex: 1;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+main#main-section article div#post-author > div {
+    cursor: pointer;
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main#main-section article div#post-author > div:hover {
+    background: #f3f6f8;
+}
+
+main#main-section article div#post-author > div > span {
+    padding: 2px;
+    font-size: 4px;
+}
+
+main#main-section article div#post-author a > div {
+    display: flex;
+}
+
+main#main-section article div#post-author a > div img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    margin-right: 6px;
+}
+
+main#main-section article div#post-author a > div > div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1px;
+}
+
+main#main-section article div#post-author a > div > div > span {
+    line-height: 10px;
+    margin-top: 4px;
+    margin-left: 1px;
+}
+
+main#main-section article div#post-author a > div > div div strong {
+    color: #000;
+    font-size: 15px;
+}
+
+main#main-section article div#post-author a > div > div div strong:hover {
+    color: #0073b1;
+}
+
+main#main-section article div#post-author a > div > div div span span {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+main#main-section article div#post-data p {
+    padding: 8px 14px 0;
+}
+
+main#main-section article div#post-data p span {
+    color: #0073b1;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+main#main-section article div#post-data p a {
+    color: #0073b1;
+    font-weight: bold;
+}
+
+main#main-section article div#post-data p#post-translation {
+    padding-left: 7px;
+}
+
+main#main-section article div#post-data p#post-translation button {
+    border: 0;
+    background: #fff;
+    color: #0073b1;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 10px;
+    padding: 4px 7px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+main#main-section article div#post-data p#post-translation button:hover {
+    background-color: #e8f7ff;
+}
+
+main#main-section article div#post-data img {
+    width: 100%;
+    cursor: pointer;
+    border-bottom: 1px solid #e6e9ec;
+    border-top: 1px solid #e6e9ec;
+}
+
+main#main-section article div#post-interactions div#interactions-amount {
+    margin: 7px 16px;
+    border-bottom: 1px solid #e6e9ec;
+    padding-bottom: 10px;
+
+    display: flex;
+    align-items: center;
+}
+
+main#main-section
+    article
+    div#post-interactions
+    div#interactions-amount
+    span.fas {
+    font-size: 8px;
+    padding: 3px;
+    margin-right: 3px;
+    border-radius: 50%;
+    color: #f3f6f8;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3), 1px -1px 0 rgba(0, 0, 0, 0.3),
+        -1px 1px 0 rgba(0, 0, 0, 0.3), 1px 1px 0 rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+main#main-section
+    article
+    div#post-interactions
+    div#interactions-amount
+    span#amount-info {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.6);
+    margin-left: 3px;
+    cursor: pointer;
+}
+
+main#main-section
+    article
+    div#post-interactions
+    div#interactions-amount
+    span#amount-info
+    span {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+main#main-section
+    article
+    div#post-interactions
+    div#interactions-amount
+    span#like-icon {
+    background: #0092e0;
+}
+
+main#main-section
+    article
+    div#post-interactions
+    div#interactions-amount
+    span#heart-icon {
+    background: #f67373;
+}
+
+main#main-section article div#post-interactions div#interactions-btns {
+    margin: 4px 10px;
+    display: flex;
+}
+
+main#main-section article div#post-interactions div#interactions-btns button {
+    border: 0;
+    background: #fff;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: bold;
+    font-size: 14px;
+    padding: 2px 5px;
+    height: 30px;
+    margin-right: 5px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+}
+
+main#main-section
+    article
+    div#post-interactions
+    div#interactions-btns
+    button:hover {
+    background: #f1f1f1;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+main#main-section
+    article
+    div#post-interactions
+    div#interactions-btns
+    button
+    span.far {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+main#main-section
+    article
+    div#post-interactions
+    div#interactions-btns
+    button
+    span.fa-thumbs-up {
+    margin-bottom: 4px;
+}
+
+main#main-section
+    article
+    div#post-interactions
+    div#interactions-btns
+    button
+    span.fa-share-square {
+    font-size: 18px;
+}
+
+
+/***************************************************************************
+    container > CONTAINER MEDIA QUERY
+/**************************************************************************/
+
+
+
+
+
+@media only screen and (max-width: 1078px) {
+    div.container {
+        padding: 0;
+    }
+
+    div.container main#main-section {
+        max-width: 550px;
+        width: 100%;
+        margin: 0;
+    }
+
+    main#main-section div#share-box div#button-box button {
+        display: none;
+    }
+
+    main#main-section div#share-box div#button-box button#btn-post {
+        display: block;
+        padding: 20px 17px;
+        border-right: 0;
+    }
+
+    main#main-section div#feed-sort button {
+        margin-right: 10px;
+    }
+}
+
+/*
+div.container {
+    max-width: 1188px;
+    margin: 0 auto;
+    padding: 0 30px;
+
+    grid-template-areas:
+        "ads ads ads"
+        "left-aside main-section right-aside";
+    grid-template-rows: 100px 1fr;
+    grid-template-columns: 216px 1fr 312px;
+
+    display: none;
+}
+*/
+
+/**************************************************************************
+    FOOTERPAGE
+**************************************************************************/
+
+
+footer#main-footer {
+  position:fixed;
+  bottom:0;
+  width:100%;
+  height:60px;
+  justify-content: center;
+  background:#ffffff;
+  margin: 0 auto
+}
+footer#main-footer > div nav {
+    margin-right: 17px;
+    align-items: center;
+}
+
+footer#main-footer > div nav ul {
+    display: flex;
+}
+
+footer#main-footer > div nav ul li {
+    color: #c7d1d;
+    display: inline-block;
+    height: 52px;
+    padding-right: 65px;
+}
+
+footer#main-footer > div nav ul li div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    font-size: 20px;
+    height: 100%;
+    padding-bottom: 2px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+footer#main-footer > div nav ul li div:hover {
+    color: #8c8c8c;
+}
+
+footer#main-footer > div nav ul li div.selected {
+    border-bottom: solid 2px #fff;
+    color: #c7d1d;
+    padding-left: 10px;
+    padding-right: 35px;
+}
+
+footer#main-footer > div nav ul li div#home {
+    position: relative;
+    padding-left: 350px;
+}
+
+
+footer#main-footer > div nav ul li div#right-border {
+    border-right: solid 1px rgba(255, 255, 255, 0.3);
+}
+
+footer#main-footer > div nav ul li div img {
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    border: 1px solid #e1e9ee;
+}
+
+footer#main-footer > div nav ul li div a {
+    font-size: 13px;
+    width: 100px;
+    text-align: center;
+    padding-bottom: 7px;
+    color: #d3d2a1;
+    margin-left: 20px;
+    line-height: 1.2;
+}
+
+footer#main-footer > div nav ul li div a:hover {
+    text-decoration: underline;
+}
+
+footer#main-footer > div nav ul li div span.nav-item-text {
+    font-size: 13px;
+}
+
+footer#main-footer > div nav ul li div span.nav-item-text span {
+    margin-left: 4px;
+}
+
+@media only screen and (max-width: 600px){
+  footer#main-footer > div nav ul li div#home {
+      position: relative;
+      padding-left: 0px;
+  }
+}
+/***************************************************************************
+    GLOBAL CLASSES
+/**************************************************************************/
+
+.letter-spacing {
+    letter-spacing: 0.6px;
+}
+
+.font-16 {
+    font-size: 16px !important;
+}
+
+.position-fixed {
+    position: fixed;
+    top: 60px;
+}
+
+.right-aside-fixed {
+    background: #fff;
+    border: 1px solid #cfcfcf;
+    width: 312px;
+    height: 440px;
+}
+
+.vanish {
+    border: 0 !important;
+    background: transparent !important;
+}

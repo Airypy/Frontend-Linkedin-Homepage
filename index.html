@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Linkedin</title>
+        <link rel="shortcut icon" type="image/png" href="/images/favicon.ico" />
+        <link rel="stylesheet" href="style.css" />
+
+        <script src="/script.js"></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    </head>
+    <body>
+        <!-- HEADER -->
+        <header id="main-header">
+            <div>
+                <div>
+                    <img
+                        id="header-logo"
+                        src="/images/linkedin.png"
+                        alt="LinkedIn"
+                    />
+                    <img
+                        id="header-picture-menu"
+                        src="/images/picture.jpg"
+                        alt="Profile picture"
+                    />
+                    <span id="header-picture-menu-bars">
+                        <span class="fas fa-bars"></span>
+                    </span>
+
+                    <div>
+                        <input
+                            id="search"
+                            type="text"
+                            placeholder="       Search"
+                            onfocus="toggleSearchInput()"
+                            onblur="toggleSearchInput()"
+                        />
+                        <span id="search-icon" class="fas fa-search"></span>
+                        <span id="search-button" class="fas fa-search"></span>
+                    </div>
+                    <span class="fas fa-comments"></span>
+                </div>
+            </div>
+        </header>
+        <!-- MAIN CONTAINER -->
+        <div class="container">
+            <!-- MAIN -->
+            <div class="center" id="main-wrapper">
+                <main id="main-section">
+                    <div id="share-box">
+                        <div id="button-box">
+                            <button id="btn-post">
+                                <span class="fas fa-edit"></span>
+                                <span id="btn-text">Start a post</span>
+                            </button>
+                        </div>
+                        <div id="link-box">
+                            <a href="#">Write an article</a>
+                            <span>on LinkedIn</span>
+                        </div>
+                    </div>
+                    <div id="feed-sort">
+                        <hr />
+                        <button>
+                            <span>Sort by:</span>
+                            <strong>Top</strong>
+                            <span class="fas fa-sort-down"></span>
+                        </button>
+                    </div>
+                    <article>
+                        <div id="post-author">
+                            <a href="#">
+                                <div>
+                                    <img
+                                        src="/images/example-person2.jpeg"
+                                        alt=""
+                                    />
+                                    <div>
+                                        <div>
+                                            <strong id="post-author-name"
+                                                >Niranjan Jain</strong
+                                            >
+                                            <span>
+                                                <span>&nbsp;·&nbsp;</span>
+                                                1st</span
+                                            >
+                                        </div>
+                                        <span
+                                            >SDE Intern</span
+                                        >
+                                        <span>12h</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <div>
+                                <span class="fas fa-circle"></span>
+                                <span class="fas fa-circle"></span>
+                                <span class="fas fa-circle"></span>
+                            </div>
+                        </div>
+                        <div id="post-data">
+                            <p>
+                                I know this guy
+                                <span>Ashutosh Airy</span>, Front-End
+                                Developer, and found out that he cloned LinkedIn
+                                layout using HTML/CSS. I think you should check
+                                this out ;)
+                            </p>
+                            <p id="post-translation">
+                                <button>See translation</button>
+                            </p>
+                            <img src="/images/example-post-image1.png" alt="" />
+                        </div>
+                        <div id="post-interactions">
+                            <div id="interactions-amount">
+                                <span
+                                    id="like-icon"
+                                    class="fas fa-thumbs-up fa-flip-horizontal"
+                                ></span>
+                                <span
+                                    id="heart-icon"
+                                    class="fas fa-heart"
+                                ></span>
+                                <span id="amount-info"
+                                    >23 <span>&nbsp;·&nbsp;</span> 4
+                                    Comments</span
+                                >
+                            </div>
+                            <div id="interactions-btns">
+                                <button>
+                                    <span
+                                        class="far fa-thumbs-up fa-flip-horizontal"
+                                    ></span>
+                                    <span>Like</span>
+                                </button>
+                                <button>
+                                    <span
+                                        class="far fa-comment-dots fa-flip-horizontal"
+                                    ></span>
+                                    <span>Comment</span>
+                                </button>
+                                <button>
+                                    <span class="far fa-share-square"></span>
+                                    <span>Share</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                    <article>
+                        <div id="post-author">
+                            <a href="#">
+                                <div>
+                                    <img
+                                        src="/images/example-person3.jpg"
+                                        alt=""
+                                    />
+                                    <div>
+                                        <div>
+                                            <strong id="post-author-name"
+                                                >Karan Bhardwaj</strong
+                                            >
+                                            <span>
+                                                <span>&nbsp;·&nbsp;</span>
+                                                1st</span
+                                            >
+                                        </div>
+                                        <span>Web Designer at XYZ Systems</span>
+                                        <span>15h</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <div>
+                                <span class="fas fa-circle"></span>
+                                <span class="fas fa-circle"></span>
+                                <span class="fas fa-circle"></span>
+                            </div>
+                        </div>
+                        <div id="post-data">
+                            <p>
+                                You all could check
+                                <span>Ashutosh Airy</span>'s Github, he has
+                                many academic projects using technologies such
+                                as Javascript, React, Redux, Sagas, HTML, CSS
+                                and others.One of his messenger-bot can be checked out! Try clicking
+                                <a href="https://github.com/airypy/messenger-bot">here</a>
+                                ;)
+                            </p>
+                            <p id="post-translation">
+                                <button>See translation</button>
+                            </p>
+                            <img src="/images/example-post-image2.png" alt="" />
+                        </div>
+                        <div id="post-interactions">
+                            <div id="interactions-amount">
+                                <span
+                                    id="like-icon"
+                                    class="fas fa-thumbs-up fa-flip-horizontal"
+                                ></span>
+                                <span id="amount-info"
+                                    >18 <span>&nbsp;·&nbsp;</span> 6
+                                    Comments</span
+                                >
+                            </div>
+                            <div id="interactions-btns">
+                                <button>
+                                    <span
+                                        class="far fa-thumbs-up fa-flip-horizontal"
+                                    ></span>
+                                    <span>Like</span>
+                                </button>
+                                <button>
+                                    <span
+                                        class="far fa-comment-dots fa-flip-horizontal"
+                                    ></span>
+                                    <span>Comment</span>
+                                </button>
+                                <button>
+                                    <span class="far fa-share-square"></span>
+                                    <span>Share</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </main>
+            </div>
+        </div>
+        <footer id="main-footer">
+          <div>
+            <nav>
+                <ul>
+                    <li>
+                        <div id="home" class="selected">
+                            <span class="fas fa-home"></span>
+                            <span class="nav-item-text">Home</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <span class="fas fa-user-friends"></span>
+                            <span class="nav-item-text">My Network</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <span class="fas fa-suitcase"></span>
+                            <span class="nav-item-text">Jobs</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <span class="fas fa-bell"></span>
+                            <span class="nav-item-text">Notifications</span>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+          </div>
+
+        </footer>
+    </body>
+</html>
