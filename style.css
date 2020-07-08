@@ -213,7 +213,7 @@ div.container {
     height: 300px;
     position: absolute;
     left: 50%;
-    top: 27%;
+    top: 30%;
     transform: translate(-50%, -50%);
   }
 
@@ -655,7 +655,7 @@ footer#main-footer {
   height:60px;
   justify-content: center;
   background:#ffffff;
-  margin: 0 auto
+  margin: 0 auto;
 }
 footer#main-footer > div nav {
     margin-right: 17px;
@@ -670,7 +670,7 @@ footer#main-footer > div nav ul li {
     color: #c7d1d;
     display: inline-block;
     height: 52px;
-    padding-right: 65px;
+
 }
 
 footer#main-footer > div nav ul li div {
@@ -699,7 +699,6 @@ footer#main-footer > div nav ul li div.selected {
 
 footer#main-footer > div nav ul li div#home {
     position: relative;
-    padding-left: 350px;
 }
 
 
@@ -736,10 +735,14 @@ footer#main-footer > div nav ul li div span.nav-item-text span {
     margin-left: 4px;
 }
 
-@media only screen and (max-width: 600px){
-  footer#main-footer > div nav ul li div#home {
-      position: relative;
-      padding-left: 0px;
+@media only screen and (max-width: 781px) {
+  footer#main-footer > div nav ul li {
+      padding-left:6%;
+  }
+}
+@media only screen and (min-width: 781px) {
+  footer#main-footer > div nav ul li {
+      padding-left:21%;
   }
 }
 /***************************************************************************
