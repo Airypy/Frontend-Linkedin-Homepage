@@ -736,12 +736,12 @@ footer#main-footer > div nav ul li div span.nav-item-text span {
 }
 @media only screen and (max-width: 2000px) {
   footer#main-footer > div nav ul li {
-      padding-left:15%;
+      padding-right:22.5%;
   }
 }
 @media only screen and (max-width: 781px) {
   footer#main-footer > div nav ul li {
-      padding-left:4%;
+      padding-right:11%;
   }
 }
 
